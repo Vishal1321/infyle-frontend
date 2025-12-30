@@ -1,13 +1,12 @@
+import React from "react";
+import Product from "./Product";
+
 const Dashboard = ({ vendor }) => {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
-      <div className="bg-white p-6 rounded shadow w-full max-w-md text-center">
-        <h1 className="text-2xl font-bold mb-4">Welcome, {vendor.name}</h1>
-        <p className="mb-2">Email: {vendor.email}</p>
-        <p className="mb-2">Phone: {vendor.phone}</p>
-        <p className="mb-4">OAuth: {vendor.oauthProvider}</p>
-        <button className="bg-red-500 text-white p-2 rounded hover:bg-red-600" onClick={() => window.location.reload()}>Logout</button>
-      </div>
+    <div className="w-full max-w-2xl bg-white p-6 rounded-lg shadow-md">
+      <h2 className="text-xl font-bold mb-4">Welcome, {vendor.email}</h2>
+      <p className="text-gray-700 mb-4">This is your dashboard.</p>
+      <Product />
     </div>
   );
 };
